@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pcrespoS3.Views.vlogin"
+             Title="vlogin">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="15">
+        <Label 
+            Text="Inicio de sesion"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Image Source="https://cdn-icons-png.flaticon.com/512/295/295128.png"
+               WidthRequest="150"/>
+        <Grid
+            RowSpacing="10"
+            ColumnSpacing="10"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO: "
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario" 
+                   Placeholder="Igresa el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Label Text="Contra: "
+                   FontSize="18"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtContra" 
+                   Placeholder="Igresa la contra"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+            <Button x:Name="btnIniciarSesion"
+                    Text="Iniciar"
+                    Clicked="btnIniciarSesion_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+            <Button x:Name="btnRegistrarUsuario"
+                    Text="Registrate"
+                    Clicked="btnRegistrarUsuario_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+            
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>
